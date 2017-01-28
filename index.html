@@ -2,33 +2,55 @@
 <html>
 <head>
 	<title></title>
+
+	<style>
+		.center {
+			background-color: yellow;
+			margin: 0 auto;
+			text-align: center;
+			width: 80%;
+
+		}
+		.fullWidth{
+				width: 100%;
+			}
+			button{
+				padding: 80px
+			}
+		</style>
+
 </head>
 <body>
 
+  <div class="center"> 
 	<h1>0</h1>
-	<h2>Sparty</h2>
-	<button id="decrease"> - </button>
-	<button id="increase"> + </button>
-
+	<img class="fullWidth" src="http://www.placecage.com/c/600/400">
+	<button id="decrease"> last </button>
+	<button id="increase"> first </button>
+  </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 
 	<script>
-	var sparty = 0;
+	var cage = 400;
+	var cageURL = "http://www.placecage.com/c/600/";
 
 	$("button").click(function(){
 		console.log('working'); 
 
 		if($(this).attr( "id" )==="increase"){
-			sparty = sparty + 1;
+			cage = cage + 1;
 
 		} else {
-	sparty = sparty - 1;		
+			cage = cage - 1;		
 		}
-		console.log(sparty);
 
-		$("h1").text(sparty); 
-	})	
+		var cageString = cage.toString();
+		var newCage =cageURL + cageString;
+
+		console.log(newCage);
+		$("img").attr('src', newCage); 
+	});	
 
 	</script>
 
