@@ -1,64 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-
-	<style>
-		.center {
-			background-color: yellow;
-			margin: 0 auto;
-			text-align: center;
-			width: 80%;
-
-		}
-		.fullWidth{
-				width: 100%;
-			}
-			button{
-				padding: 80px
-			}
-		</style>
-
+	<title>d3vr campSND</title>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
 </head>
 <body>
 
-  <div class="center"> 
-	<h1>0</h1>
-	<img class="fullWidth" src="http://www.placecage.com/c/600/400">
-	<button id="decrease"> last </button>
-	<button id="increase"> first </button>
-  </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-
-	<script>
-	var cage = 400;
-	var cageURL = "http://www.placecage.com/c/600/";
-
-	$("button").click(function(){
-		console.log('working'); 
-
-		if($(this).attr( "id" )==="increase"){
-			cage = cage + 1;
-
-		} else {
-			cage = cage - 1;		
-		}
-
-		var cageString = cage.toString();
-		var newCage =cageURL + cageString;
-
-		console.log(newCage);
-		$("img").attr('src', newCage); 
-	});	
-
-	</script>
-
-
-
-
-
-
-
+	<script src="js/app.js"></script>
 </body>
 </html>
