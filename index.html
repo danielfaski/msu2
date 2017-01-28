@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h1>0</h1>
+	<h2>Sparty</h2>
+	<button id="decrease"> - </button>
+	<button id="increase"> + </button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+	<script>
+	var sparty = 0;
+
+	$("button").click(function(){
+		console.log('working'); 
+
+		if($(this).attr( "id" )==="increase"){
+			sparty = sparty + 1;
+
+		} else {
+	sparty = sparty - 1;		
+		}
+		console.log(sparty);
+
+		$("h1").text(sparty); 
+	})	
+
+	</script>
+
+
+
+
+
+
+
+</body>
+</html>
